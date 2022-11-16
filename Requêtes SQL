@@ -1,0 +1,45 @@
+Requête changer email:
+UPDATE ` utilisateur`
+SET `email`=« [value-4]
+WHERE ` identifiant=«  »;
+
+Requête changer mdr:
+UPDATE ` utilisateur`
+SET `mot_de_passe`=« [value-4]
+WHERE ` identifiant=«  »;
+
+Requête recherche utilisateur via son mdr ou son email:
+SELECT * FROM `utilisateur`
+WHERE `email`=«  » OR `mot_de_passe`=«  »;
+
+Requête pour ajouter le  jeu « The power of memory » à la BDD:
+INSERT INTO `jeu` (`identifiant`,`nom_jeu`)
+VALUES (« 1 », « The_power_of_memory »);
+
+Requête pour afficher les score des utilisateurs:
+SELECT `nom_jeu`, `pseudo`, `difficulte_partie`, `score_partie` FROM `utilisateur`, `score`, `jeu`
+ORDER BY `nom_jeu` ASC, `difficulte_partie` DESC, `score_partie` DESC; 
+
+Requête pour afficher les score des utilisateurs avec filtre :
+SELECT `nom_jeu`, `pseudo`, `difficulte_partie`, `score_partie` FROM `utilisateur`, `score`, `jeu`
+ORDER BY `nom_jeu` ASC, `difficulte_partie` DESC, `score_partie` DESC; 
+WHERE `difficulte_partie `=«  » OR `jeu`=«  » OR `pseudo`=«  »
+
+Requête pour enregistrer les nouveaux scores des utilisateurs:
+UPDATE `utilisateur`, `score`,`jeu` 
+SET `nom_jeu`=«  », `pseudo`=«  », `difficulte_partie`=«  », `score_partie=«  »
+WHERE `id_joueur`= «  »;
+
+Requête pour envoyer un message le chat:
+INSERT INTO `message`(`id_message`,`id_joueur`, `message`, `date_et_heure_du_message`)
+VALUES («  », «  », «  », «  »);
+
+
+
+SELECT `message`,  `id_joueur`,  `date_et_heure_du_message`
+CASE  
+	WHEN id_joueur` =2 THEN ‘true’
+	ELSE ‘false’
+END
+FROM `message`
+WHERE `date_et_heure_du_message` >= 24
