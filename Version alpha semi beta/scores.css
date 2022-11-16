@@ -1,0 +1,159 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #0f0e2e;
+}
+
+.tableau{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 880px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.titre{
+    width: 60%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background-color: rgb(28, 6, 54);
+}
+
+table{
+    width: 60%;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+
+
+
+.fondcorps{
+    width: 60%;
+    height: 460px;
+}
+
+.corps{
+    width: 100%;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+.premier{
+    width: 190px;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column-reverse;
+    font-size: 1.5em;
+    background-color: goldenrod;
+}
+
+.premier a{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-decoration: none;
+    font-size: 2em;
+    margin-bottom: 270px;
+}
+
+.Picture{
+    border-radius: 50%;
+    height: 170px;
+    width: 150px;
+    margin-bottom: 60px;
+}
+
+.PictureBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.deuxieme{
+    width: 170px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    font-size: 1.5em;
+    background-color: silver;
+}
+
+.deuxieme a{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.troisieme{
+    width:160px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    font-size: 1.5em;
+    background-color: rgb(160, 62, 24);
+}
+
+.troisieme a{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+
+thead{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.insc{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logimg{
+    height: auto;
+    max-width: 100%;
+
+}
+
+.text{
+    position: absolute;
+    color: white;
+    font-family: 'muli-semibold', sans-serif;
+    font-style: bold;
+    font-size: 1.5em
+}
