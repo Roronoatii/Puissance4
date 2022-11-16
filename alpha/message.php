@@ -37,7 +37,7 @@
         <div class="text">
             <h1>C O N N E X I O N</h1>
         </div>
-        <img class="logimg" src="./image/fond-nuit-ville-futuriste-extraterrestre_1441-2823.jpg">
+        <img class="logimg" src="assets/image/fond-nuit-ville-futuriste-extraterrestre_1441-2823.jpg">
        
     </section>        
     <section class="chat">
@@ -56,7 +56,7 @@
                             Hello world!
                         </div> 
                     </div>
-                    <div class="date1">Aujourd'hui à 15h22</div>
+                    <div class="date1"><?php echo date('l jS \of F Y h:i:s A'); ?></div>
                 </div>
                 <div class="block_separation"></div>
                 <div class="block2">
@@ -66,7 +66,7 @@
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias quaerat consequuntur praesentium! Quaerat distinctio dolor veritatis hic delectus corrupti numquam recusandae, ipsam, facilis dolorum expedita est nobis officiis ratione consectetur.
                         </div>
                     </div>
-                    <div class="date2">Aujourd'hui à 15h36</div>
+                    <div class="date2"><?php echo date('l jS \of F Y h:i:s A'); ?></div>
                 </div>
             </div>
     </section>
