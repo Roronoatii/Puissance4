@@ -10,34 +10,13 @@
     <link href="view/footer2.css" rel="stylesheet">
     <link href="view/header2.css" rel="stylesheet">
     <link href="memory.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
-    <link href="https://www.dafontfree.net/embed/bXVsaS1zZW1pYm9sZCZkYXRhLzE2L20vNzg2NTYvTXVsaS1TZW1pQm9sZC50dGY"
-        rel="stylesheet" type="text/css" />
-</head>
+   </head>
 
 <body>
     <header>
-        <nav>
-
-            <div class="box1">
-
-                <a href="">The power of Memory</a>
-
-            </div>
-
-            <div class="box2">
-
-                <a href="Home.html">ACCUEIL</a>
-
-                <a href="login.html">JEU</a>
-
-                <a href="register.html">SCORES</a>
-
-                <a href="nous_contacter.html">NOUS CONTACTER</a>
-            </div>
-
-        </nav>
-
+        <?php
+            include 'view/header_inc.php';
+        ?>
     </header>
     <section class="insc">
         <div class="text">

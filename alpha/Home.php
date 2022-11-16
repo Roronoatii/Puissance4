@@ -7,26 +7,23 @@
     <title>Home</title>
     <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
     <link href="Home.css" rel="stylesheet">
-    <link href="view/header.css" rel="stylesheet">
-    <link href="view/footer2.css" rel="stylesheet">
+   
 </head>
 <body>
-    <header>
-        <div class="topHeader">
-            <p class="headerTitle">The Power of Memory</p>
-            <p class="nav">
-                <a class="navLinks" href="Home.html">ACCUEIL</a>
-                <a class="navLinks" href="login.html">JEU</a>
-                <a class="navLinks" href="login.html">SCORES</a>
-                <a class="navLinks" href="nous_contacter.html">NOUS CONTACTER</a>
-            </p>
-        </div>
-        <div class="bottomHeader">
+    <section class="backhead">
+        <header>
+            <?php
+            include 'view/header_inc.php';
+            ?>
+        </header>
+    <section class="bottomHeader">
+        <div >
             <p class="bigTitle">BIENVENUE DANS<br>NOTRE STUDIO !<br>
                 <span class="white">Venez challenger les cerveaux les plus agiles !</span></p>
-                <a href="register.html" style="text-decoration: none"><button type="button"> JOUER !</button></a>
+                <a href="register.php" style="text-decoration: none"><button type="button"> JOUER !</button></a>
         </div>
-    </header>
+    </section>
+    </section>
 
 
 
@@ -77,35 +74,9 @@
 
 
     <footer class="footer">
-    
-        <div class="box11">
-
-            <p class="white yo">Information</p>
-            <p class="gris">Quisque commodo facilisis purus, interdum volutpat arcu viverra sed.</p>
-            <p class="gris"><span class="orange">Tel : </span>06 05 04 03 02</p>
-            <p class="gris"><span class="orange">Email : </span>support@powerofmemory.com</p>
-            <p class="gris"><span class="orange">Location : </span>Paris</p>
-            <p><a href="https://www.facebook.com/" target="_blank"> <i  class="fa-brands fa-square-facebook"></i></a>
-                <a href="https://www.twitter.com/" target="_blank"> <i class="fa-brands fa-square-twitter"></i></a>
-                <a href="https://www.google.com/" target="_blank"> <i class="fa-brands fa-google"></i></a>
-                <a href="https://www.pinterest.com/" target="_blank"> <i class="fa-brands fa-square-pinterest"></i></a>
-                <a href="https://www.instagram.com//" target="_blank"> <i class="fa-brands fa-square-instagram"></i></a></p>
-               
-                <p class="copy">Copyright © 2022 Tous droits réservés</p>
-        </div>
-       
-
-
-       <section class="box22">
-        <h5 class="white">Power Of Memory</h5>
-        <div id="bullet">
-            <ul class="bullet">
-                <li><a href="url">Jouer !</a></li><br>
-                <li><a href="url">Les scores</a></li><br>
-                <li><a href="url">Nous contacter</a></li>
-            </ul>
-        </div>
-       </section>
+        <?php
+            include 'view/footer_inc.php';
+        ?>
     </footer>
 </body>
 </html>

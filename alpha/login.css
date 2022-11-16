@@ -1,20 +1,19 @@
-*{
+html{
     margin: 0;
     padding: 0;
+    background-color: rgb(12,11,47);
 }
-.insc{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+
 .logimg{
     height: auto;
     max-width: 100%;
 
 }
 .text{
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     color: white;
     font-family: 'muli-semibold', sans-serif;
     font-style: bold;

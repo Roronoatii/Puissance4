@@ -1,55 +1,16 @@
-.leftFooter{
+.footer{
+    background-color: #0e0b26;
+    width: 100%;
+    height: 450px;
     display: flex;
-    flex-direction: column;
-}
-
-
-
-footer{
-    display: flex;
-    background-color: rgb(14,10,40);
     justify-content: space-evenly;
-    padding-top: 100px;
-    padding-bottom: 60px;
 }
-
-.rightFooter{
+.box11{
     display: flex;
     flex-direction: column;
-}
-
-.logos{
-    background-color: rgb(250,140,0);
-    width: 40px;
-    height: 40px;
-    margin-right: 4px;
-}
-
-.white{
-    color: rgb(199,202,229);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: normal;
-}
-
-
-.copyright{
-    color: rgb(199,202,229);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-}
-
-.subTitle{
-    color: rgb(250, 251, 253);
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.yellow{
-    font-weight: bold;
-    color: rgb(250,140,0);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    width: 40%;
+    margin-left: 150px;
+    margin-top: 100px;
 }
 .fa-brands{
     color: #e99122;
@@ -58,22 +19,76 @@ footer{
     margin-top: 25px;
 
 }
-.infoLink:link{
-    color: rgb(199,202,229);
+.box22{
+    width: 40%;
+    margin-left: 90px;
+    margin-top: 100px;
+
+}
+.white{
+    color: white;
+    font-family: 'muli-semibold', sans-serif;
 }
 
-.infoLink:visited{
-    color: rgb(199,202,229);
+.orange{
+    color: #e99122;
+}
+.gris{
+    color: #6a6c80;
+    font-size: 0.8em;
+    margin-top: 20px;
+
 }
 
-.infoLink{
+.bullet a:link {
+    color: #6a6c80;
+    background-color: transparent;
     text-decoration: none;
-}
+    font-size: 0.8em;
+
+  }
 
 #bullet li::marker{
-    color: rgb(250,140,0);
+
+    color: #e99122;
+}
+.bullet{
+    margin-top: 20px;
+    list-style-type: square;
+}
+.copy{
+    color: #6a6c80;
+    font-size: 0.75em;
+    margin-top: auto;
+}
+@media screen and (max-width: 900px) {
+    article {
+      padding: 1rem 3rem;
+    }
 }
 
-.bullet{
-    list-style-type: square;
+.fa-brands{
+    color: #e99122;
+    font-size: 25px;
+    margin-right: 4px;
+    margin-top: 25px;
+
+}
+
+.bouton2{
+    height: 7%;
+    width: 4%;
+    background: rgba(255, 166, 0, 0.425);
+    border-radius: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 3%;
+    top: 90%; 
+    cursor: pointer;
+}
+.fleche{
+    color: rgba(255, 255, 255, 0.463);
+    width: -1%;
 }

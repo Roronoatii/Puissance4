@@ -12,26 +12,9 @@
 </head>
 <body>
     <header>    
-        <nav>
-
-            <div class="box1">
-
-                <a href="">The power of Memory</a>
-
-            </div>
-
-            <div class="box2">
-
-                <a href="Home.html">ACCUEIL</a>
-
-                <a href="login.html">JEU</a>
-
-                <a href="register.html">SCORES</a>
-
-                <a href="nous_contacter.html">NOUS CONTACTER</a>
-            </div>
-
-        </nav>
+        <?php
+            include 'view/header_inc.php';
+        ?>
 
     </header>
     <section class="insc" >

@@ -4,60 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link href="login.css" rel="stylesheet">
-    <link href="view/footer2.css" rel="stylesheet">
-    <link href="view/header2.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
-    <link href="https://www.dafontfree.net/embed/bXVsaS1zZW1pYm9sZCZkYXRhLzE2L20vNzg2NTYvTXVsaS1TZW1pQm9sZC50dGY" rel="stylesheet" type="text/css"/>
-    
-
-</head>
-
-
-
+    </head>
 <body>
     <header>
-        <nav>
-
-            <div class="box1">
-
-                <a href="">The power of Memory</a>
-
-            </div>
-
-            <div class="box2">
-
-                <a href="Home.html">ACCUEIL</a>
-
-                <a href="login.html">JEU</a>
-
-                <a href="register.html">SCORES</a>
-
-                <a href="nous_contacter.html">NOUS CONTACTER</a>
-            </div>
-
-        </nav>
-    
-
+        <?php
+           include 'view/header_inc.php';
+        ?>
     </header>
-    <section class="insc" >
-        <div class="text">
-            <h1>I N S C R I P T I O N</h1>
-        </div>
-        <img class="logimg" src="assets/fond-nuit-ville-futuriste-extraterrestre_1441-2823.jpeg">
-       
-    </section>
-
-
-    <section class="login">
+    <section class="text">
+        <h2>C O N N E X I O N</h2>       
+        <form action="traitement.php" method="post">       
         <div class="logs">
             <input class="mailInput" type="email" placeholder="Email">
-            <input class="mailInput" type="username" placeholder="Pseudo">
             <input class="mailInput" type="password" placeholder="Mot de passe">
-            <input class="mailInput" type="password" placeholder="Confirmer le mot de passe">
             <button class="btnConnect">Connexion</button>
-
+            </form> 
         </div>
         
     </section>
