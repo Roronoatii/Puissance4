@@ -1,3 +1,8 @@
+<?php
+    $bdd = new PDO ('mysql:localhost;dbname=Puissance4_MySQL;charset=utf8;', 'root', 'root');
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
