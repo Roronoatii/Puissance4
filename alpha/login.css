@@ -4,21 +4,29 @@ html{
     background-color: rgb(12,11,47);
 }
 
-
-.logimg{
-    height: auto;
-    max-width: 100%;
-
-}
 .text{
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    background: url(assets/login_background.jpeg)40% 50%;
+    padding-top: 55px;
+    padding-bottom: 50px;
     color: white;
     font-family: 'muli-semibold', sans-serif;
-    font-style: bold;
-
-   
+    font-style: bold;   
+ }
+ .login{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding-top: 7%;
+    padding-bottom: 10%;
+ }
+ .reglink{
+    text-decoration: none;
+    color: orange;
+    margin-left: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  }
 
 .mailInput{
@@ -31,15 +39,7 @@ html{
     margin-top: 10px;
     padding-left: 22px;
 }
-.login{
-    background-color: #0f0e2e;
-    width: 100%;    
-    height: 460px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column;
-}
+
 .logs{
     display: flex;
     flex-direction:column;
