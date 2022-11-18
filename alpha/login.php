@@ -9,8 +9,11 @@
 <body>
     <header>
         <?php
-           include 'view/header_inc.php';
+            include 'view/header_inc.php';
+            require '../includes/database_inc.php';
+            require '../includes/fonctionalite-login.php';
         ?>
+        
     </header>
     <section class="text">
         <h2>C O N N E X I O N</h2> 
