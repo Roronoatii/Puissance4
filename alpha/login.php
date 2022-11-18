@@ -8,26 +8,59 @@
     </head>
 <body>
     <header>
-        <?php
-            include 'view/header_inc.php';
-            require '../includes/database_inc.php';
-            require '../includes/fonctionalite-login.php';
-        ?>
+
+
+    <?php
+session_start();
+
+include 'view/header_inc.php';
+require('../includes/database_inc.php');
+
+$bdd = connectDatabase();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    if (isset($_POST['submit'])) {
+        $emailpost = $_POST['email'];
+        $passwordpost = $_POST['password'];
+
+        $sql = "SELECT * FROM utilisateur WHERE email = :mail AND mot_de_passe = :mdp";
+        $request = $bdd->prepare($sql);
+        $request->bindParam(':mail', $emailpost);
+        $request->bindParam(':mdp', $passwordpost);
+        $request->execute();
+        $result= $request->fetch();
+
+        if ($request->rowCount() < 1) {
+            echo "Email ou mot de passe incorrect";
+
+        } else {
+            $_SESSION['email'] = $emailpost;
+            $_SESSION['password'] = $passwordpost;
+            $_SESSION['id'] = $result['identifiant'];
+            $_SESSION['username'] = $result['pseudo'];
+            $_SESSION['loggedin'] = true;
+            header('Location:myaccount.php?req_err=success');
+        }
+    }
+}
+?>
+
         
     </header>
     <section class="text">
         <h2>C O N N E X I O N</h2> 
     </section>
     <section class="login">     
-        <form action="traitement.php" method="post">       
+        <form action="" method="post">       
             <div>
                 <input class="mailInput" 
-                type="email"
+                type="email"name="email" 
                 placeholder="Email">
             </div>
             <div>
                 <input class="mailInput"
-                type="password"
+                type="password"name="password"
                 placeholder="Mot de passe">
             </div>
             <div>
