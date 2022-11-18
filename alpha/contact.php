@@ -18,18 +18,17 @@
                 <h1>NOUS CONTACTER</h1>
             </div>       
         </section>
-    <section class="global">
         <section class="info-perso">
             <div class="logo_indv">
-                <a href="#"><i class="fa-solid fa-mobile-screen-button"></i></a>
+                <a href="#"><i class="brand fa-solid fa-mobile-screen-button"></i></a>
                 <p>06 05 04 03 02</p>
             </div>
             <div class="logo_indv">
-                <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                <a href="#"><i class="brand fa-regular fa-envelope"></i></a>
                 <p>support@powerofmemory.com</p>
             </div>
             <div class="logo_indv">
-                <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+                <a href="#"><i class="brand fa-solid fa-location-dot"></i></a>
                 <p>Paris</p>
             </div>
         </section>
@@ -38,12 +37,22 @@
             <div class="logs">
                 <form action="a changer .php" method="POST">
                     <div>
-                        <input class="mailInputNom" type="Nom" placeholder="Nom">
-                        <input class="mailInputEmail" type="Email" placeholder="Email">
+                        <input class="textinput"
+                        type="Nom"
+                        placeholder="Nom">
+                        <input class="textinput"
+                        type="Email"
+                        placeholder="Email">
                     </div>
                     <div>
-                        <input class="mailInputSujet" type="Sujet" placeholder="Sujet">
-                        <input class="mailInputMessage" type="Message" placeholder="Message"> 
+                        <input class="textinput"
+                        type="Sujet"
+                        placeholder="Sujet">
+                    </div>
+                    <div>
+                        <textarea class="message"
+                        type="Message"
+                        placeholder="Message"></textarea>
                     </div>
                     <div>
                         <button class="btnConnect">Envoyer</button>
@@ -51,7 +60,6 @@
                 </form>
             </div>
         </section>
-    </section>
     <footer>
         <?php
             include 'view/footer_inc.php'

@@ -18,10 +18,14 @@
     <section class="login">     
         <form action="traitement.php" method="post">       
             <div>
-                <input class="mailInput" type="email" placeholder="Email">
+                <input class="mailInput" 
+                type="email"
+                placeholder="Email">
             </div>
             <div>
-                <input class="mailInput" type="password" placeholder="Mot de passe">
+                <input class="mailInput"
+                type="password"
+                placeholder="Mot de passe">
             </div>
             <div>
                 <button class="btnConnect">Connexion</button> <a href="register.php" class="reglink">Incription</a>
