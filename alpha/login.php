@@ -32,6 +32,7 @@
             </div>
             <div>
                 <button class="btnConnect">Connexion</button> <a href="register.php" class="reglink">Incription</a>
+                <input type="submit" name="submit">
             </div>
         </form> 
     </section>
