@@ -8,6 +8,8 @@
     </head>
 <body>
     <header>
+
+
     <?php
         session_start();
 
@@ -43,21 +45,22 @@
             }
         }
     ?>
+
         
     </header>
     <section class="text">
         <h2>C O N N E X I O N</h2> 
     </section>
     <section class="login">     
-        <form action="traitement.php" method="post">       
+        <form method="post">       
             <div>
                 <input class="mailInput" 
-                type="email"
+                type="email"name="email" 
                 placeholder="Email">
             </div>
             <div>
                 <input class="mailInput"
-                type="password"
+                type="password"name="password"
                 placeholder="Mot de passe">
             </div>
             <div>
