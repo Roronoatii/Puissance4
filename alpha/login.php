@@ -8,42 +8,13 @@
     </head>
 <body>
     <header>
-
-
-    <?php
-        session_start();
-
+        <?php
         include 'view/header_inc.php';
-        require('../includes/database_inc.php');
+        ?>
+        
 
-        $bdd = connectDatabase();
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-            if (isset($_POST['submit'])) {
-                $emailpost = $_POST['email'];
-                $passwordpost = $_POST['password'];
-
-                $sql = "SELECT * FROM utilisateur WHERE email = :mail AND mot_de_passe = :mdp";
-                $request = $bdd->prepare($sql);
-                $request->bindParam(':mail', $emailpost);
-                $request->bindParam(':mdp', $passwordpost);
-                $request->execute();
-                $result= $request->fetch();
-
-                if ($request->rowCount() < 1) {
-                    echo "<p style='color:red;'>Email ou mot de passe incorrect</p>";
-                } else {
-                    $_SESSION['email'] = $emailpost;
-                    $_SESSION['password'] = $passwordpost;
-                    $_SESSION['id'] = $result['identifiant'];
-                    $_SESSION['username'] = $result['pseudo'];
-                    $_SESSION['loggedin'] = true;
-                    header('Location:myaccount.php?req_err=success');
-                }
-            }
-        }
-    ?>
+    
 
         
     </header>
@@ -63,7 +34,46 @@
                 placeholder="Mot de passe">
             </div>
             <div>
-                <input class="btnConnect" type="submit" name="submit"> <a href="register.php" class="reglink">Incription</a>
+                <form method="post">
+                    <input class="btnConnect"type="submit" value="Connection" name="submit">
+                </form>
+                <a href="register.php" class="reglink">Incription</a>
+                <?php
+        session_start();
+
+        
+            require('../includes/database_inc.php');
+
+            $bdd = connectDatabase();
+
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                if (isset($_POST['submit'])) {
+                    $emailpost = $_POST['email'];
+                    $passwordpost = $_POST['password'];
+
+                    $sql = "SELECT * FROM utilisateur WHERE email = :mail AND mot_de_passe = :mdp";
+                    $request = $bdd->prepare($sql);
+                    $request->bindParam(':mail', $emailpost);
+                    $request->bindParam(':mdp', $passwordpost);
+                    $request->execute();
+                    $result= $request->fetch();
+                    
+                        if ($request->rowCount() < 1) {
+                            echo "<p style='color:red;'>Email ou mot de passe incorrect</p>";
+                        } else {
+                            $_SESSION['email'] = $emailpost;
+                            $_SESSION['password'] = $passwordpost;
+                            $_SESSION['id'] = $result['identifiant'];
+                            $_SESSION['username'] = $result['pseudo'];
+                            $_SESSION['loggedin'] = true;
+                            header('Location:myaccount.php?req_err=success');
+                        }
+                }
+            }
+        
+
+    ?>
             </div>
         </form> 
     </section>
