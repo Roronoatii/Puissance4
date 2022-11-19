@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h2>C O N N E X I O N</h2> 
     </section>
     <section class="login">     
-        <form action="" method="post">       
+        <form method="post">       
             <div>
                 <input class="mailInput" 
                 type="email"name="email" 
