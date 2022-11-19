@@ -32,8 +32,7 @@
                 $result= $request->fetch();
 
                 if ($request->rowCount() < 1) {
-                    echo "Email ou mot de passe incorrect";
-
+                    echo "<p style='color:red;'>Email ou mot de passe incorrect</p>";
                 } else {
                     $_SESSION['email'] = $emailpost;
                     $_SESSION['password'] = $passwordpost;
@@ -64,8 +63,7 @@
                 placeholder="Mot de passe">
             </div>
             <div>
-                <button class="btnConnect">Connexion</button> <a href="register.php" class="reglink">Incription</a>
-                <input type="submit" name="submit">
+                <input class="btnConnect" type="submit" name="submit"> <a href="register.php" class="reglink">Incription</a>
             </div>
         </form> 
     </section>
