@@ -55,7 +55,7 @@
                         placeholder="Message"></textarea>
                     </div>
                     <div>
-                    <INPUT TYPE="button" Value="Commencer la conversation !" onclick="window.location='ajax-chat/';" 
+                    <INPUT TYPE="button" Value="Demandeer de l'aide à la Coding" onclick="window.location='ajax-chat/';" 
                     style=" display: flex;
                             border-radius: 3px;
                             margin: auto;
