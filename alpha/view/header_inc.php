@@ -15,7 +15,7 @@
                     <a href="Home.php" class="correctlink">ACCUEIL</a>
                     <a href="login.php"class="correctlink">JEU</a>
                     <a href="register.php"class="correctlink">SCORES</a>
-                    <a href="nous_contacter.php"class="correctlink">NOUS CONTACTER</a>
+                    <a href="contact.php"class="correctlink">NOUS CONTACTER</a>
                 </div>
             </nav>
         </section>
