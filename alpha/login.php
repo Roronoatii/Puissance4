@@ -11,40 +11,40 @@
 
 
     <?php
-        session_start();
+session_start();
 
-        include 'view/header_inc.php';
-        require('../includes/database_inc.php');
+include 'view/header_inc.php';
+require('../includes/database_inc.php');
 
-        $bdd = connectDatabase();
+$bdd = connectDatabase();
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-            if (isset($_POST['submit'])) {
-                $emailpost = $_POST['email'];
-                $passwordpost = $_POST['password'];
+    if (isset($_POST['submit'])) {
+        $emailpost = $_POST['email'];
+        $passwordpost = $_POST['password'];
 
-                $sql = "SELECT * FROM utilisateur WHERE email = :mail AND mot_de_passe = :mdp";
-                $request = $bdd->prepare($sql);
-                $request->bindParam(':mail', $emailpost);
-                $request->bindParam(':mdp', $passwordpost);
-                $request->execute();
-                $result= $request->fetch();
+        $sql = "SELECT * FROM utilisateur WHERE email = :mail AND mot_de_passe = :mdp";
+        $request = $bdd->prepare($sql);
+        $request->bindParam(':mail', $emailpost);
+        $request->bindParam(':mdp', $passwordpost);
+        $request->execute();
+        $result= $request->fetch();
 
-                if ($request->rowCount() < 1) {
-                    echo "Email ou mot de passe incorrect";
+        if ($request->rowCount() < 1) {
+            echo "Email ou mot de passe incorrect";
 
-                } else {
-                    $_SESSION['email'] = $emailpost;
-                    $_SESSION['password'] = $passwordpost;
-                    $_SESSION['id'] = $result['identifiant'];
-                    $_SESSION['username'] = $result['pseudo'];
-                    $_SESSION['loggedin'] = true;
-                    header('Location:myaccount.php?req_err=success');
-                }
-            }
+        } else {
+            $_SESSION['email'] = $emailpost;
+            $_SESSION['password'] = $passwordpost;
+            $_SESSION['id'] = $result['identifiant'];
+            $_SESSION['username'] = $result['pseudo'];
+            $_SESSION['loggedin'] = true;
+            header('Location:myaccount.php?req_err=success');
         }
-    ?>
+    }
+}
+?>
 
         
     </header>
