@@ -55,7 +55,18 @@
                         placeholder="Message"></textarea>
                     </div>
                     <div>
-                        <button class="btnConnect">Envoyer</button>
+                    <INPUT TYPE="button" Value="Commencer la conversation !" onclick="window.location='ajax-chat/';" 
+                    style=" display: flex;
+                            border-radius: 3px;
+                            margin: auto;
+                            padding-left: 25px;
+                            padding-right: 25px;
+                            padding-top: 8px;
+                            padding-bottom: 8px;
+                            color: white;
+                            background-color: orange;
+                            border-style: none;
+                            margin: 25px 0 25px 0;">                    
                     </div>
                 </form>
             </div>
