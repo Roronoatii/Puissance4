@@ -1,16 +1,38 @@
 <?php
 include './include/dbconnect.inc.php';
 
-if (isset($_POST)) 
 
-if(!empty($_POST['nom']) && !empty($_POST['prenom'])){
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    echo 'Salut ' . $nom . '' .$prenom ;
+if(isset($_POST['submit'])){
+    $oldmail = $_POST['oldmail'];
+    $newmail = $_POST['newmail'];
+    $password = $_POST['password'];
+    $confirmpassword = $_POST['confirmpassword'];
+
+    if($confirmpassword == $password){
+        $sth = $dbh->prepare('UPDATE utilisateur SET email = ? WHERE email = ? AND mot_de_passe = ?');
+        $sth->execute([$newmail, $oldmail, $password]);
+        $donnees = $sth->fetch();
+    }
+    else
+        echo 'Incorrect';
 }
-else{
-    echo 'erreur de validation';
+
+if(isset($_POST['submit2'])){
+
+    $email = $_POST['mail'];
+    $oldpass = $_POST['currentpass'];
+    $newpass = $_POST['newpass'];
+    $confpass = $_POST['confpass'];
+
+    if($confpass == $newpass){
+        $sth = $dbh->prepare('UPDATE utilisateur SET mot_de_passe = ? WHERE email = ? AND mot_de_passe = ?');
+        $sth->execute([$newpass, $email, $oldpass]);
+        $donnees = $sth->fetch();
+    }
+    else
+        echo 'Incorrect';
 }
+
 ?>
 
 <form method="post">
@@ -19,20 +41,6 @@ else{
 <input type="submit" name="submit" value="login">
 
 </form>
-
-$oldemail = $.Post ('old.mail');
-$newemail = $.Post (newemail);
-
-$sql=SELECT *
-FROM utilisateur 
-WHERE email = $oldemail and password = $oldpassword
-$sth = $dbh->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
-$sth->execute(['toto' => 150, 'titi' => 'red']);
-$red = $sth->fetch();
-si red vide message erreur
-sinon 
-update avec le nouvel email
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +77,7 @@ update avec le nouvel email
 
     <section class="profile">
         <a  href="url" class="Pictureaccount"><img src="assets/paul.jpeg" class="Picture"></a>
-        <p class="username  ">Roro</p>
+        <p class="username  ">Aya :) </p>
   
 
         
@@ -77,14 +85,14 @@ update avec le nouvel email
 
             
             <div class="textprofile">Change Email</div>
-            <div class="newemail">
-                <input class="mailInput" type="email" placeholder="Your current Email">
-                <input class="mailInput" type="email" placeholder="New email">
-                <input class="mailInput" type="password" placeholder="Password">
-                <input class="mailInput" type="password" placeholder="Confirm password">
-                <button class="btnConnect">Change</button>
+            <form method="post" class="newemail">
+                <input class="mailInput" name="oldmail" type="email" placeholder="Your current Email">
+                <input class="mailInput" name="newmail" type="email" placeholder="New email">
+                <input class="mailInput" name="password" type="password" placeholder="Password">
+                <input class="mailInput" name="confirmpassword" type="password" placeholder="Confirm password">
+                <input class="btnConnect" type="submit" name="submit" value="Change">
 
-            </div>
+            </form>
 
            
 
@@ -92,11 +100,13 @@ update avec le nouvel email
 
         <div class="newpassword">
             <div class="textprofile">Change Password</div>
-                <input class="mailInput" type="password" placeholder="Current password ">
-                <input class="mailInput" type="password" placeholder="New password">
-                <input class="mailInput" type="password" placeholder="Confirm new password">
-                <button class="btnConnect">Change</button>
-
+            <form method="post">
+                <input class="mailInput" name="mail" type="email" placeholder="Email">
+                <input class="mailInput" name="currentpass" type="password" placeholder="Current password ">
+                <input class="mailInput" name="newpass" type="password" placeholder="New password">
+                <input class="mailInput" name="confpass" type="password" placeholder="Confirm new password">
+                <input class="btnConnect" type ="submit" name="submit2" value="Change">
+            </form>
         </div>
         
         
