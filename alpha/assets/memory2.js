@@ -4,6 +4,8 @@ var tab = [
     [0,0,0,0,0],
     [0,0,0,0,0],
     [0,0,0,0,0],
+    [0,0,0,0,0],
+    [0,0,0,0,0],
     [0,0,0,0,0]
 ];
 /*
@@ -60,12 +62,22 @@ function getimage(valeur){
         break;
         case 10: imgtxt +="sunset.jpeg"
         break;
+        case 11: imgtxt +=".jpeg"
+        break;
+        case 12: imgtxt +=".jpeg"
+        break;
+        case 13: imgtxt +=".jpeg"
+        break;
+        case 14: imgtxt +=".jpeg"
+        break;
+        case 15: imgtxt +=".jpeg"
+        break;
         default : console.log("none");
     }
     return  imgtxt;
 }
 function verif(element){
-    if(ready ===true){
+    if(ready === true){
 
     
         nbaffich++;
@@ -95,13 +107,13 @@ function verif(element){
 }
 function generaterandomresult(){
     var tab = [];
-    var nbimagepos = [0,0,0,0,0,0,0,0,0,0]
-    for (var i = 0 ; i < 4 ; i++){
+    var nbimagepos = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    for (var i = 0 ; i < 6 ; i++){
         var ligne = [];
         for (var j = 0 ; j < 5 ; j++){
             var fin = false;
             while(!fin){
-                var randomimage = Math.floor(Math.random() * 10)
+                var randomimage = Math.floor(Math.random() * 15)
                 if (nbimagepos[randomimage] < 2){
                     ligne.push(randomimage + 1);
                     nbimagepos[randomimage] ++;
@@ -112,8 +124,4 @@ function generaterandomresult(){
         tab.push(ligne);
     }
     return tab;
-}
-function animation(){
-    let target = document.getElementById("selected");
-    target.setAttribute('data', "icon: './explosion.gif'");
 }

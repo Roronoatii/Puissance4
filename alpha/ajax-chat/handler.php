@@ -3,7 +3,7 @@
 /**
  * Connexion simple à la base de données via PDO !
  */
-$db = new PDO('mysql:host=localhost;dbname=Puissance_4;charset=utf8', 'root', '', [
+$db = new PDO('mysql:host=localhost;dbname=puissance4;charset=utf8', 'root', '', [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, 
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
 ]);

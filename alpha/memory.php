@@ -53,7 +53,6 @@
                 <div id="resultat"></div>
                 <script src="./assets/memory.js"></script>
             <div>
-                
                 <div id="user" class="game-menu">
                     <div id="user-background">
                         <img id="user-picture" src="./assets/retro.jpg" />
