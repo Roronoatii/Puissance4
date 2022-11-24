@@ -13,10 +13,10 @@
                 <h1>The power of Memory</h1>
                 <div class="box2">
                     <a href="Home.php" class="correctlink">ACCUEIL</a>
-                    <a href="login.php"class="correctlink">JEU</a>
+                    <a href="login.php" class="correctlink"onclick="fonction(this.href); return false;" >JEU</a>
                     <a href="register.php"class="correctlink">SCORES</a>
                     <a href="contact.php"class="correctlink">NOUS CONTACTER</a>
-                    <a href="login.php" target="_blank"><i class="fa-regular fa-user"></i></a>
+                    <a href="login.php"><i class="fa-regular fa-user correctlink"></i></a>
                 </div>
             </nav>
         </section>
