@@ -9,7 +9,7 @@
     <link href="login.css" rel="stylesheet">
     <link href="view/footer2.css" rel="stylesheet">
     <link href="view/header2.css" rel="stylesheet">
-    <link href="memory.css" rel="stylesheet">
+    <link rel="stylesheet" href="memory.css">
    </head>
 
 <body>
@@ -130,25 +130,32 @@
                     <div class="settings-menu-titles">Settings</div>
 
                     <div id="settings-menu-item-list">
-                        <div class="settings-menu-item">
-                            <i class="fa-solid fa-user"></i>
-                            <div>Profil</div>
-                        </div>
 
-                        <div class="settings-menu-item">
+                        <div class="settings-menu-item-1">
                             <i class="fa-solid fa-star"></i>
-                            <div>Niveau</div>
+                            <form action="/action_page.php">
+                            <label for="cars">Niveau:</label>
+                            <select id="cars" name="cars">
+                                <option value="Facile">Facile</option>
+                                <option value="Moyen">Moyen</option>
+                                <option value="Difficile">Difficile</option>
+                            </select>
+                            
                         </div>
 
-                        <div class="settings-menu-item">
+                        <div class="settings-menu-item-2">
                             <i class="fa-solid fa-image"></i>
-                            <div>Theme</div>
+                            <form action="/action_page.php">
+                            <label for="cars">Thèmes:</label>
+                            <select id="cars" name="cars">
+                                <option value="RL">Rocket league</option>
+                                <option value="P.O">P.O</option>
+                                <option value="Anime">Anime</option>
+                            </select>
                         </div>
 
-                        <div class="settings-menu-item">
-                            <i class="fa-solid fa-comment"></i>
-                            <div>Chat</div>
-                        </div>
+                        <button class="btn">Lancer la partie</button>
+
                     </div>
 
                     <div class="game-menu-separator"></div>
