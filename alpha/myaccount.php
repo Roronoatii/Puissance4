@@ -1,3 +1,39 @@
+<?php
+include './include/dbconnect.inc.php';
+
+if (isset($_POST)) 
+
+if(!empty($_POST['nom']) && !empty($_POST['prenom'])){
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    echo 'Salut ' . $nom . '' .$prenom ;
+}
+else{
+    echo 'erreur de validation';
+}
+?>
+
+<form method="post">
+
+<input type="text" name="nom"/>
+<input type="submit" name="submit" value="login">
+
+</form>
+
+$oldemail = $.Post ('old.mail');
+$newemail = $.Post (newemail);
+
+$sql=SELECT *
+FROM utilisateur 
+WHERE email = $oldemail and password = $oldpassword
+$sth = $dbh->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
+$sth->execute(['toto' => 150, 'titi' => 'red']);
+$red = $sth->fetch();
+si red vide message erreur
+sinon 
+update avec le nouvel email
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +55,7 @@
 <body>
     <header>
         <?php
-            include 'view/header_inc.php';
+            include './view/header_inc.php';
         ?>
 
     </header>
@@ -27,7 +63,7 @@
         <div class="text">
             <h1>Y O U R &nbsp;&nbsp; P R O F I L E</h1>
         </div>
-        <img class="logimg" src="assets/fond-nuit-ville-futuriste-extraterrestre_1441-2823.jpeg">
+        <img class="logimg" src="./assets/fond-nuit-ville-futuriste-extraterrestre_1441-2823.jpeg">
        
     </section>
 

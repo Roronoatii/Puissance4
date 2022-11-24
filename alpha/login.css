@@ -1,10 +1,10 @@
-html{
+html {
     margin: 0;
     padding: 0;
-    background-color: rgb(12,11,47);
+    background-color: rgb(12, 11, 47);
 }
 
-.text{
+.text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,23 +13,25 @@ html{
     padding-bottom: 50px;
     color: white;
     font-family: 'muli-semibold', sans-serif;
-    font-style: bold;   
- }
- .login{
+    font-style: bold;
+}
+
+.login {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     padding-top: 7%;
     padding-bottom: 10%;
- }
- .reglink{
+}
+
+.reglink {
     text-decoration: none;
     color: orange;
     margin-left: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- }
+}
 
-.mailInput{
+.mailInput {
     background-color: #282645;
     border: none;
     color: #6a6c80;
@@ -40,11 +42,12 @@ html{
     padding-left: 22px;
 }
 
-.logs{
+.logs {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
 }
-.btnConnect{
+
+.btnConnect {
     cursor: pointer;
     background-color: #e99122;
     color: white;
@@ -54,4 +57,48 @@ html{
     height: 40px;
     align-content: flex-start;
     margin-top: 15px;
+}
+
+/* PASSWORD VALIDATION */
+
+:root {
+    --password-validation-LOW-color: red;
+    --password-validation-MEDIUM-color: orange;
+    --password-validation-HIGH-color: green;
+}
+
+.password-validation-slider {
+    height: 10px;
+}
+
+.password-validation-slider,
+.password-validation-text {
+    transition: all ease 0.2s;
+}
+
+.password-validation-wrapper[level="LOW"]>.password-validation-text {
+    color: var(--password-validation-LOW-color);
+}
+
+.password-validation-wrapper[level="LOW"]>.password-validation-slider {
+    background: var(--password-validation-LOW-color);
+    width: 20%;
+}
+
+.password-validation-wrapper[level="MEDIUM"]>.password-validation-text {
+    color: var(--password-validation-MEDIUM-color);
+}
+
+.password-validation-wrapper[level="MEDIUM"]>.password-validation-slider {
+    background: var(--password-validation-MEDIUM-color);
+    width: 60%;
+}
+
+.password-validation-wrapper[level="HIGH"]>.password-validation-text {
+    color: var(--password-validation-HIGH-color);
+}
+
+.password-validation-wrapper[level="HIGH"]>.password-validation-slider {
+    background: var(--password-validation-HIGH-color);
+    width: 100%;
 }
