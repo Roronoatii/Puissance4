@@ -50,6 +50,14 @@
     </footer>
 </body>
 
+<?php
+$_SESSION['test'] = true;
+if(){
+// faire en sorte que si session prend la valeur true cela signifie que j'ai accéder à login via jeu
+}else{
+// faire en sorte que si session prend la valeur true cela signifie que j'ai accéder à login via l'icon profil
 
+}
+?>
 
 </html>

@@ -35,7 +35,7 @@
             </div>
             <div>
                 <form method="post">
-                    <input class="btnConnect"type="submit" value="Connection" name="submit">
+                    <input class="btnConnect"type="submit" value="Connexion" name="submit">
                 </form>
                 <a href="register.php" class="reglink">Incription</a>
                 <?php
@@ -62,12 +62,18 @@
                         if ($request->rowCount() < 1) {
                             echo "<p style='color:red;'>Email ou mot de passe incorrect</p>";
                         } else {
-                            $_SESSION['email'] = $emailpost;
-                            $_SESSION['password'] = $passwordpost;
+                            $_SESSION['email'] = $result['email'];
+                            $_SESSION['password'] = $result['mot_de_passe'];
                             $_SESSION['id'] = $result['identifiant'];
                             $_SESSION['username'] = $result['pseudo'];
                             $_SESSION['loggedin'] = true;
-                            header('Location:myaccount.php?req_err=success');
+                            header('Location:memory.php');
+                        }
+                        if ($_SESSION['test'] = true){
+                            header('Location:memory.php');
+                            
+                        }else{
+                            header('Location:myaccount.php');
                         }
                 }
             }

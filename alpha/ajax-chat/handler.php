@@ -64,6 +64,5 @@ function postMessage(){
   // 3. Donner un statut de succes ou d'erreur au format JSON
   echo json_encode(["status" => "success"]);
 }
-/**
- * Voilà c'est tout en gros.
- */
+
+?>

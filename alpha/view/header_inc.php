@@ -16,6 +16,7 @@
                     <a href="login.php"class="correctlink">JEU</a>
                     <a href="register.php"class="correctlink">SCORES</a>
                     <a href="contact.php"class="correctlink">NOUS CONTACTER</a>
+                    <a href="login.php" target="_blank"><i class="fa-regular fa-user"></i></a>
                 </div>
             </nav>
         </section>
