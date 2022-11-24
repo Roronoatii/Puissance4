@@ -10,6 +10,8 @@
     <link href="view/footer2.css" rel="stylesheet">
     <link href="view/header2.css" rel="stylesheet">
     <link href="memory.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
+
    </head>
 
 <body>
@@ -47,78 +49,11 @@
                 <button class="game-menu-button">Nouvelle partie</button>
             </div>
 
-            <table id="table">
-                <tr class="board-row">
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                </tr>
-                <tr class="board-row">
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                </tr>
-                <tr class="board-row">
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                </tr>
-                <tr class="board-row">
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                    <td class="board-cell">
-                        <div class="board-card"></div>
-                    </td>
-                </tr>
-            </table>
-
+            <div class="table">
+                <div id="resultat"></div>
+                <script src="./assets/memory.js"></script>
             <div>
+                
                 <div id="user" class="game-menu">
                     <div id="user-background">
                         <img id="user-picture" src="./assets/retro.jpg" />
