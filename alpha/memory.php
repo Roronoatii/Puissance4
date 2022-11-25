@@ -9,7 +9,15 @@
     <link href="login.css" rel="stylesheet">
     <link href="view/footer2.css" rel="stylesheet">
     <link href="view/header2.css" rel="stylesheet">
-    <link rel="stylesheet" href="memory.css">
+    <link href="memory.css" rel="stylesheet">
+    <script src="./save-game-score.js"></script>
+    <script>
+        const score = 130;
+        const startGameDate = new Date();
+        const gameId = 1;
+        const gameLevel = "facile";
+        saveGameScore(score, startGameDate, gameId, gameLevel);
+    </script>
    </head>
 
 <body>

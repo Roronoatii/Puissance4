@@ -1,3 +1,47 @@
+<?php
+include './include/dbconnect.inc.php';
+
+
+if(isset($_POST['submit'])){
+    $oldmail = $_POST['oldmail'];
+    $newmail = $_POST['newmail'];
+    $password = $_POST['password'];
+    $confirmpassword = $_POST['confirmpassword'];
+
+    if($confirmpassword == $password){
+        $sth = $dbh->prepare('UPDATE utilisateur SET email = ? WHERE email = ? AND mot_de_passe = ?');
+        $sth->execute([$newmail, $oldmail, $password]);
+        $donnees = $sth->fetch();
+    }
+    else
+        echo 'Incorrect';
+}
+
+if(isset($_POST['submit2'])){
+
+    $email = $_POST['mail'];
+    $oldpass = $_POST['currentpass'];
+    $newpass = $_POST['newpass'];
+    $confpass = $_POST['confpass'];
+
+    if($confpass == $newpass){
+        $sth = $dbh->prepare('UPDATE utilisateur SET mot_de_passe = ? WHERE email = ? AND mot_de_passe = ?');
+        $sth->execute([$newpass, $email, $oldpass]);
+        $donnees = $sth->fetch();
+    }
+    else
+        echo 'Incorrect';
+}
+
+?>
+
+<form method="post">
+
+<input type="text" name="nom"/>
+<input type="submit" name="submit" value="login">
+
+</form>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +63,7 @@
 <body>
     <header>
         <?php
-            include 'view/header_inc.php';
+            include './view/header_inc.php';
         ?>
 
     </header>
@@ -27,13 +71,13 @@
         <div class="text">
             <h1>Y O U R &nbsp;&nbsp; P R O F I L E</h1>
         </div>
-        <img class="logimg" src="assets/fond-nuit-ville-futuriste-extraterrestre_1441-2823.jpeg">
+        <img class="logimg" src="./assets/fond-nuit-ville-futuriste-extraterrestre_1441-2823.jpeg">
        
     </section>
 
     <section class="profile">
         <a  href="url" class="Pictureaccount"><img src="assets/paul.jpeg" class="Picture"></a>
-        <p class="username  ">Roro</p>
+        <p class="username  ">Aya :) </p>
   
 
         
@@ -41,14 +85,14 @@
 
             
             <div class="textprofile">Change Email</div>
-            <div class="newemail">
-                <input class="mailInput" type="email" placeholder="Your current Email">
-                <input class="mailInput" type="email" placeholder="New email">
-                <input class="mailInput" type="password" placeholder="Password">
-                <input class="mailInput" type="password" placeholder="Confirm password">
-                <button class="btnConnect">Change</button>
+            <form method="post" class="newemail">
+                <input class="mailInput" name="oldmail" type="email" placeholder="Your current Email">
+                <input class="mailInput" name="newmail" type="email" placeholder="New email">
+                <input class="mailInput" name="password" type="password" placeholder="Password">
+                <input class="mailInput" name="confirmpassword" type="password" placeholder="Confirm password">
+                <input class="btnConnect" type="submit" name="submit" value="Change">
 
-            </div>
+            </form>
 
            
 
@@ -56,11 +100,13 @@
 
         <div class="newpassword">
             <div class="textprofile">Change Password</div>
-                <input class="mailInput" type="password" placeholder="Current password ">
-                <input class="mailInput" type="password" placeholder="New password">
-                <input class="mailInput" type="password" placeholder="Confirm new password">
-                <button class="btnConnect">Change</button>
-
+            <form method="post">
+                <input class="mailInput" name="mail" type="email" placeholder="Email">
+                <input class="mailInput" name="currentpass" type="password" placeholder="Current password ">
+                <input class="mailInput" name="newpass" type="password" placeholder="New password">
+                <input class="mailInput" name="confpass" type="password" placeholder="Confirm new password">
+                <input class="btnConnect" type ="submit" name="submit2" value="Change">
+            </form>
         </div>
         
         
