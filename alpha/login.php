@@ -34,54 +34,16 @@
                 placeholder="Mot de passe">
             </div>
             <div>
-                <form method="post">
-                    <input class="btnConnect"type="submit" value="Connexion" name="submit">
-                </form>
-                <a href="register.php" class="reglink">Incription</a>
                 <?php
-        session_start();
-
-        
-            require('../includes/database_inc.php');
-
-            $bdd = connectDatabase();
-
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-                if (isset($_POST['submit'])) {
-                    $emailpost = $_POST['email'];
-                    $passwordpost = $_POST['password'];
-
-                    $sql = "SELECT * FROM utilisateur WHERE email = :mail AND mot_de_passe = :mdp";
-                    $request = $bdd->prepare($sql);
-                    $request->bindParam(':mail', $emailpost);
-                    $request->bindParam(':mdp', $passwordpost);
-                    $request->execute();
-                    $result= $request->fetch();
-                    
-                        if ($request->rowCount() < 1) {
-                            echo "<p style='color:red;'>Email ou mot de passe incorrect</p>";
-                        } else {
-                            $_SESSION['email'] = $result['email'];
-                            $_SESSION['password'] = $result['mot_de_passe'];
-                            $_SESSION['id'] = $result['identifiant'];
-                            $_SESSION['username'] = $result['pseudo'];
-                            $_SESSION['loggedin'] = true;
-                            header('Location:memory.php');
-                        }
-                        if ($_SESSION['test'] = true){
-                            header('Location:memory.php');
-                            
-                        }else{
-                            header('Location:myaccount.php');
-                        }
-                }       
-            }
-        
-
-    ?>
-            </div>
+                if(isset($_GET['jeu'])){
+                    echo "<input type='hidden' name='jeu' value='1' />";
+                }
+                ?>
+                 <input class="btnConnect"type="submit" value="Connexion" name="submit">
+           
         </form> 
+                <a href="register.php" class="reglink">Incription</a>
+            </div> 
     </section>
 
 
