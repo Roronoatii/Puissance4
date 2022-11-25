@@ -7,7 +7,9 @@
     <title>Home</title>
     <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
     <link href="Home.css" rel="stylesheet">
-   
+    <link href ="view/header_inc.css">
+    <link href ="view/footer_inc.css">
+
 </head>
 <body>
     <section class="backhead">
