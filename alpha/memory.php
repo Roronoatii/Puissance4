@@ -10,6 +10,10 @@
     <link href="view/footer2.css" rel="stylesheet">
     <link href="view/header2.css" rel="stylesheet">
     <link href="memory.css" rel="stylesheet">
+    <script src="./save-game-score.js"></script>
+    <script>
+        saveGameScore(130);
+    </script>
    </head>
 
 <body>
