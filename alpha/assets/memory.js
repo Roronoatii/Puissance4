@@ -16,6 +16,7 @@ var tabresult= [
     [0,0,0,0,0,0]
 ] 
 */
+let compt =0;
 var tabresult = generaterandomresult();
 var oldselection = [];
 var nbaffich = 0;
@@ -29,7 +30,7 @@ function affichertab(){
         txt += "<div>";
         for (var j=0; j < tab[i].length;j++){
             if (tab[i][j] === 0){
-                txt += "<button class='btn btn-primary m-1' style='width: 100px; height:100px; border:none; padding:0%; border-radius:10px; margin-left:5px; margin-right:5px; margin-top:5px;' onClick = 'verif(\""+i+"-"+j+"\")' > <img src='./assets/card.jpeg' id='selected' onClick='animation()' style='width: 100%; height:100%; cursor:pointer; background-size:cover; border-radius:10px;'> </button>";
+                txt += "<button class='btn btn-primary m-1' style='width: 100px; height:100px; border:none; padding:0%; border-radius:10px; margin-left:5px; margin-right:5px; margin-top:5px;' onClick = 'verif(\""+i+"-"+j+"\")' > <img src='./assets/card.jpeg' id='selected' style='width: 100%; height:100%; cursor:pointer; background-size:cover; border-radius:10px;'> </button>";
             }else{
                 txt += "<img src ='"+getimage(tab[i][j])+"'  style='width: 100px;height:100px; border-radius:10px; margin-left:5px;  margin-right:5px; margin-top:5px;' class='m-1'>";
             }
@@ -69,6 +70,7 @@ function verif(element){
 
     
         nbaffich++;
+        var win;
         var ligne = element.substr(0,1);
         var colonne = element.substr(2,1)
         tab[ligne][colonne] = tabresult[ligne][colonne];
@@ -80,6 +82,15 @@ function verif(element){
                     tab[ligne][colonne] = 0;
                     tab[oldselection[0]][oldselection[1]] = 0;
                 } 
+                if (tab[ligne][colonne] === tabresult[oldselection[0]][oldselection[1]]){
+                    compt += 1;
+                    console.log(compt);
+                    if(compt === 10){
+                        fin = true;
+                        console.log("win");
+                        arreter();
+                    }
+                }
                 affichertab();
                 ready = true;
                 nbaffich=0;
@@ -87,8 +98,10 @@ function verif(element){
             }, 600);
             
             
-        } else{
+        }else{
+            
             oldselection = [ligne, colonne];
+            
         }
     
     }
@@ -113,7 +126,4 @@ function generaterandomresult(){
     }
     return tab;
 }
-function animation(){
-    let target = document.getElementById("selected");
-    target.setAttribute('data', "icon: './explosion.gif'");
-}
+
