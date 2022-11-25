@@ -9,28 +9,41 @@
 <body>
     <header>
         <?php
-           include 'view/header_inc.php';
+        include 'view/header_inc.php';
         ?>
+        
+
+
+    
+
+        
     </header>
     <section class="text">
         <h2>C O N N E X I O N</h2> 
     </section>
     <section class="login">     
-        <form action="traitement.php" method="post">       
+        <form method="post">       
             <div>
                 <input class="mailInput" 
-                type="email"
+                type="email"name="email" 
                 placeholder="Email">
             </div>
             <div>
                 <input class="mailInput"
-                type="password"
+                type="password"name="password"
                 placeholder="Mot de passe">
             </div>
             <div>
-                <button class="btnConnect">Connexion</button> <a href="register.php" class="reglink">Incription</a>
-            </div>
+                <?php
+                if(isset($_GET['jeu'])){
+                    echo "<input type='hidden' name='jeu' value='1' />";
+                }
+                ?>
+                 <input class="btnConnect"type="submit" value="Connexion" name="submit">
+           
         </form> 
+                <a href="register.php" class="reglink">Incription</a>
+            </div> 
     </section>
 
 
