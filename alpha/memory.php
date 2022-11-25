@@ -12,7 +12,11 @@
     <link href="memory.css" rel="stylesheet">
     <script src="./save-game-score.js"></script>
     <script>
-        saveGameScore(130);
+        const score = 130;
+        const startGameDate = new Date();
+        const gameId = 1;
+        const gameLevel = "facile";
+        saveGameScore(score, startGameDate, gameId, gameLevel);
     </script>
    </head>
 
