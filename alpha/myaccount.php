@@ -32,7 +32,7 @@
     </section>
 
     <section class="profile">
-        <a  href="url" class="Pictureaccount"><img src="assets/paul.jpeg" class="Picture"></a>
+        <a  href="#" class="Pictureaccount"><img src="assets/paul.jpeg" class="Picture"></a>
         <p class="username  ">Roro</p>
   
 

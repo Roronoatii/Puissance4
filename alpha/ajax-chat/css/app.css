@@ -10,7 +10,9 @@
 h1 {
   font-family: "Cinzel Decorative", cursive;
 }
-
+body{
+  width: 100vh;
+}
 body, input, button {
   font-family: Ubuntu, sans-serif;
 }
@@ -62,3 +64,8 @@ input {
 button[type="submit"]{
   width: 20%;
 }
+html{
+  display: flex;
+  justify-content: center;
+}
+  

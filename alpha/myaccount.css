@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+html{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(12,11,47);
+}
 .insc{
     position: relative;
     display: flex;
@@ -14,14 +19,18 @@
 
 }
 .text{
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("assets/login_background.jpeg");
+    height: 50%;
+    width: 100%;
+    padding-top: 55px;
+    padding-bottom: 50px;
     color: white;
     font-family: 'muli-semibold', sans-serif;
     font-style: bold;
-
-   
- }
-
+}
 .mailInput{
     background-color: #282645;
     border: none;
@@ -113,7 +122,7 @@
 
 .username{
     position: absolute;
-    top: 500px;
+    top: 150px;
     left: 670px;
     color: white;
     font-size: 3em;
