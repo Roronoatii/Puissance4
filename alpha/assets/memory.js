@@ -6,16 +6,7 @@ var tab = [
     [0,0,0,0,0],
     [0,0,0,0,0]
 ];
-/*
-var tabresult= [
-    [1,1,0,0,0,0],
-    [0,0,0,0,0,0],
-    [0,0,0,0,0,0],
-    [0,0,0,0,2,2],
-    [0,0,0,0,0,0],
-    [0,0,0,0,0,0]
-] 
-*/
+
 let compt =0;
 var tabresult = generaterandomresult();
 var oldselection = [];
