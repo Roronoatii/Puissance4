@@ -137,12 +137,6 @@ thead{
     justify-content: space-around;
 }
 
-.insc{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .logimg{
     height: auto;
@@ -150,10 +144,14 @@ thead{
 
 }
 
-.text{
-    position: absolute;
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(assets/login_background.jpeg)40% 50%;
+    padding-top: 55px;
+    padding-bottom: 50px;
     color: white;
     font-family: 'muli-semibold', sans-serif;
     font-style: bold;
-    font-size: 1.5em
 }
