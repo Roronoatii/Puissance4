@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="login.css" rel="stylesheet">
-    <link href="view/footer2.css" rel="stylesheet">
+    <link href="view/footer.css" rel="stylesheet">
     <link href="view/header2.css" rel="stylesheet">
     <link href="memo-moyen.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
@@ -24,8 +24,6 @@
         <div class="text">
             <h1 id="title">THE POWER OF MEMORY</h1>
         </div>
-        <img class="logimg" src="assets/fond-nuit-ville-futuriste-extraterrestre_1441-2823.jpeg">
-
     </section>
 
     <section id="game">
