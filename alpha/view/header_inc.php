@@ -25,7 +25,7 @@ require_once ('../includes/database_inc.php');
                         $_SESSION['id'] = $result['identifiant'];
                         $_SESSION['username'] = $result['pseudo'];
                         $_SESSION['loggedin'] = true;
-                        header('Location: memory.php');
+                        header('Location: theme1-facile.php');
                     }              
                 }
                      

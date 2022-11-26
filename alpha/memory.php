@@ -9,7 +9,7 @@
     <link href="login.css" rel="stylesheet">
     <link href="view/footer2.css" rel="stylesheet">
     <link href="view/header2.css" rel="stylesheet">
-    <link href="memory.css" rel="stylesheet">
+    <link href="memo-moyen.css" rel="stylesheet">
     <script src="./save-game-score.js"></script>
     <script>
         const score = 130;
