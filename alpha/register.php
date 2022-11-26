@@ -9,6 +9,24 @@
     <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
     <link href="https://www.dafontfree.net/embed/bXVsaS1zZW1pYm9sZCZkYXRhLzE2L20vNzg2NTYvTXVsaS1TZW1pQm9sZC50dGY" rel="stylesheet" type="text/css"/>
     <script src="./password-validation.js"></script>
+    <script>
+        function handlePasswordChange(password) {alert('e');
+            const passwordLevel = getPasswordLevel(password);
+            const passwordValidationElement = document.getElementById("passwordValidation");
+            passwordValidationElement.setAttribute('LEVEL', passwordLevel);
+
+            const passwordValidationTextElement = passwordValidationElement.getElementsByClassName('password-validation-text')[0];
+            passwordValidationTextElement.innerHTML = getPasswordValidationTextByPasswordLevel(passwordLevel);
+        }
+
+        function getPasswordValidationTextByPasswordLevel(passwordLevel) {
+            switch(passwordLevel) {
+                case "LOW": return 'Faible';
+                case "MEDIUM": return 'Moyen';
+                case "HIGH": return 'Fort';
+            }
+        }
+    </script>
 </head>
     <body>
         <header>

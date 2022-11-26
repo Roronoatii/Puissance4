@@ -35,13 +35,6 @@ if(isset($_POST['submit2'])){
 
 ?>
 
-<form method="post">
-
-<input type="text" name="nom"/>
-<input type="submit" name="submit" value="login">
-
-</form>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +50,6 @@ if(isset($_POST['submit2'])){
     
 
 </head>
-
 
 
 <body>
