@@ -5,18 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="login.css" rel="stylesheet">
+    <link href="view/footer.css" rel="stylesheet">
+    <link href="view/header2.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <?php
         include 'view/header_inc.php';
-        ?>
-        
-
-
-    
-
-        
+        ?>  
     </header>
     <section class="text">
         <h2>C O N N E X I O N</h2> 
