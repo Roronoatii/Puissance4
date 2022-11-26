@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="login.css" rel="stylesheet">
-    <link href="view/footer2.css" rel="stylesheet">
+    <link href="view/footer.css" rel="stylesheet">
     <link href="view/header2.css" rel="stylesheet">
     <link href="memo-moyen.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
@@ -24,8 +24,6 @@
         <div class="text">
             <h1 id="title">THE POWER OF MEMORY</h1>
         </div>
-        <img class="logimg" src="assets/fond-nuit-ville-futuriste-extraterrestre_1441-2823.jpeg">
-
     </section>
 
     <section id="game">
@@ -103,40 +101,10 @@
     </section>
 
 
-    <footer class="footer">
-
-        <div class="box11">
-
-            <p class="white yo">Information</p>
-            <p class="gris">Quisque commodo facilisis purus, interdum volutpat arcu viverra sed.</p>
-            <p class="gris"><span class="orange">Tel : </span>06 05 04 03 02</p>
-            <p class="gris"><span class="orange">Email : </span>support@powerofmemory.com</p>
-            <p class="gris"><span class="orange">Location : </span>Paris</p>
-            <p><a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-square-facebook"></i></a>
-                <a href="https://www.twitter.com/" target="_blank"> <i class="fa-brands fa-square-twitter"></i></a>
-                <a href="https://www.google.com/" target="_blank"> <i class="fa-brands fa-google"></i></a>
-                <a href="https://www.pinterest.com/" target="_blank"> <i class="fa-brands fa-square-pinterest"></i></a>
-                <a href="https://www.instagram.com//" target="_blank"> <i class="fa-brands fa-square-instagram"></i></a>
-            </p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <p class="copy">Copyright © 2022 Tous droits réservés</p>
-        </div>
-
-
-
-        <section class="box22">
-            <h5 class="white">Power Of Memory</h5>
-            <div id="bullet">
-                <ul class="bullet">
-                    <li><a href="url">Jouer !</a></li><br>
-                    <li><a href="url">Les scores</a></li><br>
-                    <li><a href="url">Nous contacter</a></li>
-                </ul>
-            </div>
-        </section>
+    <footer>
+    <?php
+        include "./view/footer_inc.php"
+    ?>
     </footer>
     <script src="./assets/timer.js"></script>
     <script src="./assets/theme1-facile.js"></script>
