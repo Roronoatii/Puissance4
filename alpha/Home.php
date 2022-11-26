@@ -7,13 +7,17 @@
     <title>Home</title>
     <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
     <link href="Home.css" rel="stylesheet">
-   
+    <link href="view/footer.css" rel="stylesheet">
+    <link href="view/header2.css" rel="stylesheet">
+
 </head>
 <body>
     <section class="backhead">
         <header>
             <?php
+            
             include 'view/header_inc.php';
+            
             ?>
         </header>
     <section class="bottomHeader">
