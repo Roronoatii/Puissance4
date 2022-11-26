@@ -5,18 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="login.css" rel="stylesheet">
-    </head>
+    <link href="view/footer.css" rel="stylesheet">
+    <link href="view/header2.css" rel="stylesheet">
+</head>
 <body>
     <header>
         <?php
         include 'view/header_inc.php';
-        ?>
-        
-
-
-    
-
-        
+        ?>  
     </header>
     <section class="text">
         <h2>C O N N E X I O N</h2> 
@@ -34,48 +30,16 @@
                 placeholder="Mot de passe">
             </div>
             <div>
-                <form method="post">
-                    <input class="btnConnect"type="submit" value="Connection" name="submit">
-                </form>
-                <a href="register.php" class="reglink">Incription</a>
                 <?php
-        session_start();
-
-        
-            require('../includes/database_inc.php');
-
-            $bdd = connectDatabase();
-
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-                if (isset($_POST['submit'])) {
-                    $emailpost = $_POST['email'];
-                    $passwordpost = $_POST['password'];
-
-                    $sql = "SELECT * FROM utilisateur WHERE email = :mail AND mot_de_passe = :mdp";
-                    $request = $bdd->prepare($sql);
-                    $request->bindParam(':mail', $emailpost);
-                    $request->bindParam(':mdp', $passwordpost);
-                    $request->execute();
-                    $result= $request->fetch();
-                    
-                        if ($request->rowCount() < 1) {
-                            echo "<p style='color:red;'>Email ou mot de passe incorrect</p>";
-                        } else {
-                            $_SESSION['email'] = $emailpost;
-                            $_SESSION['password'] = $passwordpost;
-                            $_SESSION['id'] = $result['identifiant'];
-                            $_SESSION['username'] = $result['pseudo'];
-                            $_SESSION['loggedin'] = true;
-                            header('Location:myaccount.php?req_err=success');
-                        }
+                if(isset($_GET['jeu'])){
+                    echo "<input type='hidden' name='jeu' value='1' />";
                 }
-            }
-        
-
-    ?>
-            </div>
+                ?>
+                 <input class="btnConnect"type="submit" value="Connexion" name="submit">
+           
         </form> 
+                <a href="register.php" class="reglink">Incription</a>
+            </div> 
     </section>
 
 
