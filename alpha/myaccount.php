@@ -68,8 +68,8 @@ if(isset($_POST['submit2'])){
     </section>
 
     <section class="profile">
-        <a  href="url" class="Pictureaccount"><img src="assets/paul.jpeg" class="Picture"></a>
-        <p class="username  ">Aya </p>
+        <a  href="#" class="Pictureaccount"><img src="assets/paul.jpeg" class="Picture"></a>
+        <p class="username  ">Roro</p>
   
 
         

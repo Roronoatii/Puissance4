@@ -15,8 +15,9 @@
     <section class="backhead">
         <header>
             <?php
+            
             include 'view/header_inc.php';
-
+            
             ?>
         </header>
     <section class="bottomHeader">

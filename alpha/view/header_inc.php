@@ -1,6 +1,6 @@
 <?php
 require_once ('../includes/database_inc.php');
-session_start();
+            session_start();
 
             $bdd = connectDatabase();
 
@@ -27,19 +27,24 @@ session_start();
                         $_SESSION['loggedin'] = true;
                         header('Location: memory.php');
                     }              
-                }       
+                }
+                     
             }
+            
+            
             
 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
      $isconnect = 'memory.php';
      $isconnect2 ='myaccount.php';
      $isconnect3 = 'Home.php';
+     $isconnect4 = 'deconnexion.php';
 }
 else{
-     $isconnect = 'connexion.php';
-     $isconnect2 ='connexion.php';
+     $isconnect = 'login.php';
+     $isconnect2 ='login.php';
      $isconnect3 = 'Home.php';
+     $isconnect4 = 'deconnexion.php';
 }
 ?>
 <!DOCTYPE html>
@@ -48,7 +53,8 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./header_inc.css">
+    <link rel="stylesheet" href="./view/header_inc.css">
+    <link rel="stylesheet" href="./view/header.css">
 </head>
 <body>
     <header>
@@ -61,6 +67,7 @@ else{
                     <a href="register.php"class="correctlink">SCORES</a>
                     <a href="contact.php"class="correctlink">NOUS CONTACTER</a>
                     <a href="<?php echo $isconnect2?>"><i class="fa-regular fa-user correctlink"></i></a>
+                    <a href="<?php echo $isconnect4?>" class="correctlink">SE DECONNECTER</a>
                 </div>
             </nav>
         </section>

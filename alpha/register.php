@@ -29,7 +29,6 @@
     </script>
 </head>
     <body>
-     
         <header>
             <?php
                 include 'view/header_inc.php';
