@@ -9,8 +9,15 @@
     <link href="login.css" rel="stylesheet">
     <link href="view/footer.css" rel="stylesheet">
     <link href="view/header2.css" rel="stylesheet">
-    <link href="memo-moyen.css" rel="stylesheet">
+    <link href="memo-facile.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
+    <script>
+        const score = 130;
+        const startGameDate = new Date();
+        const gameId = 1;
+        const gameLevel = "facile";
+        saveGameScore(score, startGameDate, gameId, gameLevel);
+    </script>
 
    </head>
 
