@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="Home.css" rel="stylesheet">
-    <link href="view/footer.css" rel="stylesheet">
-    <link href="view/header2.css" rel="stylesheet">
+    <link rel="stylesheet" href="footer.css">
     <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
     <link href="https://www.dafontfree.net/embed/bXVsaS1zZW1pYm9sZCZkYXRhLzE2L20vNzg2NTYvTXVsaS1TZW1pQm9sZC50dGY" rel="stylesheet" type="text/css"/>
@@ -28,7 +26,6 @@
         <a href="https://www.google.com/" target="_blank"> <i class="fa-brands fa-google"></i></a>
         <a href="https://www.pinterest.com/" target="_blank"> <i class="fa-brands fa-square-pinterest"></i></a>
         <a href="https://www.instagram.com//" target="_blank"> <i class="fa-brands fa-square-instagram"></i></a></p>
-
         <p class="copy">Copyright © 2022 Tous droits réservés</p>
 </div>
 
@@ -42,11 +39,11 @@
         <li><a href="url">Les scores</a></li><br>
         <li><a href="url">Nous contacter</a></li>
     </ul>
-</div>
-<a href="#"  class="bouton2">
+    </div>
+    <a href="#"  class="bouton2">
     <div class="fleche"><i class="fa-solid fa-chevron-up">
-    </i></div>
-</a>
+    </i></div></a>
+
 </section>
 </footer>
     
