@@ -1,5 +1,5 @@
 <?php 
-    require_once '../Includes/config.php'; 
+    require_once '../includes/config.php'; 
     if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['mot_de_passe']) && !empty($_POST['password_retype']))
     {
         $pseudo = htmlspecialchars($_POST['pseudo']);
@@ -9,7 +9,7 @@
         $id = htmlspecialchars($_POST['id']);
 
         
-        $check = $bdd->prepare('SELECT pseudo, email, password FROM utilisateur WHERE email = ?');
+        $check = $bdd->prepare('SELECT pseudo, email, mot_de_passe FROM utilisateur WHERE email = ?');
         $check->execute(array($email));
         $data = $check->fetch();
         $row = $check->rowCount();
@@ -41,3 +41,4 @@
             }else{ header('Location: register.php?reg_err=pseudo_length');}
         }else{ header('Location: register.php?reg_err=already');}
     }
+?>

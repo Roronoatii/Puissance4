@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="login.css" rel="stylesheet">
+    <link href="view/footer.css" rel="stylesheet">
+    <link href="view/header2.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/81dc5c492f.js" crossorigin="anonymous"></script>
     <link href="https://www.dafontfree.net/embed/bXVsaS1zZW1pYm9sZCZkYXRhLzE2L20vNzg2NTYvTXVsaS1TZW1pQm9sZC50dGY" rel="stylesheet" type="text/css"/>
     <script src="./password-validation.js"></script>
@@ -38,7 +40,7 @@
                 <h1>I N S C R I P T I O N</h1>
         </section>
         <section class="login">
-            <form action="traitement.php" method="post">
+            <form action="register-traitement.php" method="post">
                 <div>
                     <input class="mailInput" type="email" placeholder="Email">
                 </div>
@@ -56,7 +58,7 @@
                     <input class="mailInput" type="password" placeholder="Confirmer le mot de passe">
                 </div>
                 <div>
-                    <button class="btnConnect">Connexion</button>
+                <button href="login.php" class="btnConnect">Connexion</button>
                 </div>
             </form>
         </section>
@@ -71,15 +73,11 @@
     </body>
 
 <?php
-
-
 $_SESSION['test'] = true;
-// if(){
-// // faire en sorte que si session prend la valeur true cela signifie que j'ai accéder à login via jeu
-// }else{
-// // faire en sorte que si session prend la valeur true cela signifie que j'ai accéder à login via l'icon profil
-
-// }
 ?>
 
 </html>
+
+
+
+
